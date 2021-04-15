@@ -1,0 +1,219 @@
+/*inicio configuração conteiner */
+
+.gameconteiner {
+    -moz-box-flex: flex;
+    height: 100%;
+    /* width: 100%; */
+}
+
+/* fim configuração conteiner */
+
+/* configuração barra lateral */
+
+.bi-justify {
+    height: 32px;
+    width: 32px;
+}
+
+.checkbar {
+    display: none;
+}
+
+.checkbar:checked ~ .sidenav{
+    transform: translateX(320px);
+}
+
+.sidenav {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.666);
+    left: -320px;
+}
+
+.labelbar {
+    /* padding-top: 1px; */
+    position: absolute;
+    z-index: 5;
+}
+
+.label-input{
+    margin: 8px;
+}
+
+.tologin {
+    padding: 15px ;
+    text-align: center;
+    color: rgb(0, 149, 255);
+}
+
+.headtable{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: rgb(0, 149, 255);
+    font-weight: bold;
+}
+
+.pwd{
+    margin-bottom: 15px;
+}
+
+.firsttd{
+    position: relative;
+    width: 100%;
+}
+
+.formgame{
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-tologin {
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px 0px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+}
+
+.btn-tologin{
+    background-color:  #fff; 
+    border: 1px solid rgb(0, 149, 255);
+    color: rgb(0, 149, 255);
+    transition: background-color 0.5s;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 165px;
+    margin-bottom: 10px;
+}
+
+.btn-tologin:hover{
+    background-color: rgb(0, 149, 255);
+    color: #fff;
+    border-color: rgb(0, 149, 255);
+}
+
+/* fim configuração barra lateral */
+
+/* Início configuraçao switch button*/
+
+.switch-button{
+    left: 5px;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    -webkit-appearance: none;
+    background-color: #c6c6c6;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(35, 35, 35, 0.8);
+    transition: .3s;
+}
+
+.switch-button:checked{
+    background-color: rgb(0, 149, 255);
+}
+
+.switch-button:before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    transition: .3s;
+}
+.switch-button:checked:before{
+   left:15px;
+}
+
+/* fim configuraçao switch button*/
+
+.select-br{
+    width: 100%;
+    height: 30px;
+}
+
+table {
+    display: inline-block;
+    justify-content: center;
+    position: absolute;
+    width: 320px;
+}
+.alfa {
+    height: 30px;
+    text-align: left;
+    width: 48%;
+  
+}
+
+.bravo {
+   width: 22%;
+    text-align: center;
+    height: 100%;
+}
+
+.charlie {
+    padding-top: 6px;
+    width: 70%;
+    float: right;
+}
+
+/* configuração svg */
+
+.config-fcn {
+    text-align: center;
+    margin-bottom: 2px;
+    border: 1px solid rgb(0, 149, 255);
+    padding: 10px;
+}
+
+.svg-config {
+    fill: #000;
+    width: 19px; 
+    height: 19px; 
+}
+
+.svg-config:hover {
+    fill: rgb(0,149,255);
+    width: 22px; 
+    height: 22px; 
+}
+
+/* fim configuração svg */
+
+/* configuração div central */
+.base{
+    position: absolute;
+    display: flex;
+    height: 624px;
+    width: 1363px;
+}
+.gamecenter{
+    background-image: url('../assets/background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONFIGURAÇÃO NAV FARM */
+.gamecenter{
+    width: 100%;
+    height: 100%;
+}
+
+.navfarm{
+    width: 100% - 320px;
+    height: 200px;
+    position: relative;
+    background-color: rgba(35, 35, 35, 0.8);
+    margin-left: 320px;
+    z-index: 1;
+}
