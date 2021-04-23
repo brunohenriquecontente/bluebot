@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(/_img/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+    background-color: rgb(0, 152, 255);
+    border-radius: 15px;
+    height: 50%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /*  space around? */
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    z-index: 2;
+    left: 0%;
+}
+
+/*  início formatação títulos, subtitulos e textos */
+
+.title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.title-primary {
+    color: rgb(0, 152, 255);
+}
+
+.title-secondary {
+    color: white;
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+.subtitle-primary {
+    color: rgb(0, 152, 255);
+}
+
+.subtitle-secondary {
+    color: white;
+}
+
+/* fim formatação títulos */
+
+/* início formatação section e nav  */
+
+.first-content {
+    display: flex;
+}
+
+.first-content .second-column {
+    z-index: 7;
+}
+
+.first-column {
+    text-align: center;
+    z-index: 5;
+    width: 40%;
+}
+
+.second-column {
+    /* flex: 2 0 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+/* segundo conteudo */
+
+.second-content {
+    position: absolute;
+    display: flex;
+}
+
+.second-content .first-column {
+    order: 2;
+}
+
+.second-content .second-column {
+    order: 1;
+}
+
+/* fim formatação section e nav */
+
+/* início formatação input e label*/
+
+.table-form tr td input {
+    border: none;
+    width: 100%;
+    height: 30px;
+    /* margin: 2px; */
+}
+
+.table-form tr td input:focus {
+    outline: 0;
+    /* remove borda ao clicar na input*/
+}
+
+.table-form tr td:first-child {
+    vertical-align: middle;
+    text-align: end;
+}
+
+.label-input {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.icon-label {
+    padding: 0px 5px;
+}
+
+/* fim formatação input e label */
+
+/* início formatação icones */
+
+.table-social-media {
+    position: absolute;
+    bottom: 0;
+}
+
+.table-social-media tr td a {
+    color: white;
+    font-size: 30px;
+    margin: 0px 32px 0px 32px;
+    cursor: initial;
+}
+
+.table-social-media tr td a i:hover {
+    color: rgb(0, 0, 255);
+    cursor: pointer;
+}
+
+/*  fim formatação icones */
+
+/* início formatação botões */
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 6px 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgb(0, 152, 255);
+    transition: 0.5s;
+    border: 1px solid black;
+}
+
+.btn-primary:hover {
+    color: rgb(0, 152, 255);
+    background-color: white;
+    border: 1px outset rgb(0, 0, 0);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: rgb(0, 152, 255);
+    transition: 0.5s;
+    border: 1px outset rgb(0, 152, 255);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(0, 152, 255);
+    color: white;
+    border: 1px outset black;
+}
+
+.table-form tr:last-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#right-button {
+    align-self: center;
+}
+
+#forgotpassword {
+    color: rgb(0, 152, 255);
+    font-size: 13px;
+    float: right;
+    margin: 8px 0;
+}
+
+/* fim formatação botões */
+
+/* início transição com z-index */
+
+.sign-in-js .first-content .first-column, .sign-in-js .first-content {
+    z-index: -1;
+    /* animation: slide 4s;
+    position: relative; */
+}
+
+.sign-in-js .second-content .second-column {
+    z-index: 9;
+}
+
+.sign-in-js .second-content .first-column {
+    z-index: 13;
+}
+
+/* .content .first-content .first-column{
+    z-index: -5;
+} */
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-radius: 0px 15px 15px 0px;
+    animation: login 4s;
+    z-index: 12;
+}
+
+.sign-up-js .first-content .first-column, .sign-up-js .first-content .second-column {
+    z-index: 10;
+}
+
+.sign-up-js .second-content .first-column, .sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .content::before {
+    left: 0%;
+    animation: signup 4s;
+    z-index: 8;
+}
+
+.stopped .first-column, .sign-up-js .first-content .second-column {
+    z-index: 10;
+}
+
+.stopped .second-content, .sign-up-js .second-content .second-column {
+    z-index: -2;
+}
+
+/* fim transição z index */
+
+/* animação com keyframes */
+
+@keyframes login {
+    from {
+        left: 0;
+        width: 40%;
+    }
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes signup {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+
+@keyframes slide {
+    from {
+        z-index: 12;
+        left: 0%;
+        opacity: 1
+    }
+    25% {
+        left: 80px;
+        opacity: 0.8;
+    }
+    50% {
+        left: 100px;
+        opacity: 0.5;
+    }
+    75% {
+        left: 140px;
+        opacity: 0.3;
+    }
+    to {
+        z-index: -1;
+    }
+}

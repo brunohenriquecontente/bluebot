@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    background-image: url(/_img/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* height: 100%;
+    width: 100%; */
+    /* background-color: rgb(209, 209, 209); */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    border-style: outset;
+    border-color: black;
+    width: 80%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: inline-flex;
+}
+
+.first-column {
+    text-align: center;
+    flex: 1 0 auto;
+    background-color: royalblue;
+    width: 45%;
+    height: 100%;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+}
+
+.second-column {
+    text-align: center;
+    flex: 2 0 auto;
+    background-color: whitesmoke;
+    width: 55%;
+    height: 100%;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+
+
+td{
+vertical-align:middle;
+}
+
+
+/* .content::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.699);
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+} */
+
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1%;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-content {
+    position: absolute;
+    display: none;
+}
+
+/* FORMATAÇÃO INPUT */
+
+input {
+    width: 30vh;
+    height: 4.5vh;
+    padding: 1.5vh;
+    background-color: rgba(34, 111, 255, 0.349);
+}
+
+input:hover{
+    border-color: blue;
+    border-style: outset;
+    /* border-width: ; */
+}
+
+
+/* FORMATAÇÃO BOTOES */
+
+.btn-white {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 15vh;
+    text-transform: uppercase;
+    padding: 0.3rem;
+}
+
+.btn-white:hover {
+    background-color:dodgerblue;
+    color: white;
+    border: solid 1px black;
+}
+
+.btn-blue {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 15vh;
+    text-transform: uppercase;
+    padding: 0.3rem;
+    margin-top: 20px;
+}
+
+.btn-blue:hover {
+    background-color:dodgerblue ;
+    color: rgb(255, 255, 255);
+    border-color: white;
+}
+
+/* configuração botão registro / cadastro */
+
+#right-button {
+    width: 5rem;
+    float: right;
+    position: absolute;
+    margin-left: 7%;
+}
+
+/* configuração tabela criar conta */
+
+
+.table-form tr td:first-child {
+    text-align: end;
+    padding-top: 1.5vh;
+    font-size: 110%;
+ } 
+
+.table-form tr td:last-child{
+    float: left;
+}
+
+
+
+/* configuração tabela mídias sociais rodapé */
+
+.table-social-media {
+    position: absolute;
+    bottom: 0;
+    width: 55%;
+}
