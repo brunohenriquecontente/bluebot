@@ -6,9 +6,10 @@
 }
 
 .container {
-    background-image: url("/img/background2.png");
+    background-image: url(/img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: dimgray;
     position: relative;
     display: flex;
     justify-content: center;
