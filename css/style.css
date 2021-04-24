@@ -38,7 +38,6 @@
     height: 100%;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    z-index: 2;
     left: 0%;
 }
 
@@ -84,7 +83,7 @@
 
 .first-column {
     text-align: center;
-    z-index: 5;
+    z-index: 2;
     width: 40%;
 }
 
@@ -99,7 +98,8 @@
 /* segundo conteudo */
 
 .second-content {
-    position: absolute;
+
+    position: absolute; 
     display: flex;
 }
 
@@ -173,7 +173,8 @@
     border-radius: 10px;
     padding: 6px 20px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 8px;
+    margin-bottom: 10%;
 }
 
 .btn-primary {
@@ -224,8 +225,6 @@
 
 .sign-in-js .first-content .first-column, .sign-in-js .first-content {
     z-index: -1;
-    /* animation: slide 4s;
-    position: relative; */
 }
 
 .sign-in-js .second-content .second-column {
@@ -243,7 +242,7 @@
 .sign-in-js .content::before {
     left: 60%;
     border-radius: 0px 15px 15px 0px;
-    animation: login 4s;
+    animation: login 1s;
     z-index: 12;
 }
 
@@ -257,16 +256,30 @@
 
 .sign-up-js .content::before {
     left: 0%;
-    animation: signup 4s;
     z-index: 8;
+    animation: signup 1s;
 }
 
 .stopped .first-column, .sign-up-js .first-content .second-column {
-    z-index: 10;
+    z-index: 1;
 }
 
 .stopped .second-content, .sign-up-js .second-content .second-column {
     z-index: -2;
+}
+
+/* teste teste teste teste */
+
+.sign-in-js .first-column {
+    z-index: -5;
+    position: relative;
+    animation: slidein 1s;
+}
+
+.sign-up-js .first-column{
+    z-index: 15;
+    position: relative;
+    animation: slideout 1s;
 }
 
 /* fim transição z index */
@@ -319,25 +332,62 @@
     }
 }
 
-@keyframes slide {
+/* slides de opacidade */
+
+@keyframes slidein {
     from {
-        z-index: 12;
-        left: 0%;
-        opacity: 1
+        left: -200px;
+        opacity: 0;
+        z-index: -1;
     }
     25% {
-        left: 80px;
-        opacity: 0.8;
+        left: -130px;
+        opacity: 0.5;
+        z-index: 12;
+    }
+    50% {
+        left: -100px;
+        opacity: 0.7;
+        z-index: 12;
+    }
+    75% {
+        left: -60px;
+        opacity: 0.9;
+        z-index: 12;
+    }
+    to {
+        left: 0px;
+        z-index: 12;
+        opacity: 1;
+    }
+}
+
+/* slideout */
+
+@keyframes slideout {
+    from {
+        left: 200px;
+        opacity: 0;
+    }
+    25% {
+        left: 130px;
+        opacity: 0.3;
+
     }
     50% {
         left: 100px;
-        opacity: 0.5;
+        opacity: 0.6;
+
     }
     75% {
-        left: 140px;
-        opacity: 0.3;
+        left: 60px;
+        opacity: 0.9;
+    
     }
     to {
-        z-index: -1;
+        left: 0px;
+        opacity: 1;
+
+
     }
 }
