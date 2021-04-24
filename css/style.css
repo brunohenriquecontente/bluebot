@@ -400,18 +400,16 @@
         top: 0;
         border-radius: 0;
     }
-    .first-content, .second-content{
+    .first-content, .second-content {
         flex-direction: column;
         justify-content: space-around;
-        
     }
     .sign-in-js .content::before {
         top: 60%;
         left: 0;
         border-radius: 0;
     }
-
-    .title-primary{
+    .title-primary {
         margin-top: 10%;
     }
     @keyframes login {
@@ -512,12 +510,27 @@
 }
 
 @media screen and (max-width: 540px) {
-    .title-primary{
+    .title-primary {
         margin-top: 20%;
     }
-    
-    .label{
-        width: 50%;
+    .label {
+        width: 40%;
+    }
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .sign-out-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+    }
 
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
     }
 }
